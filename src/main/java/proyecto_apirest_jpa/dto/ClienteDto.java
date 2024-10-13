@@ -4,6 +4,7 @@ import proyecto_apirest_jpa.model.Usuario;
 
 public class ClienteDto
 {
+    private Long  idCliente;
     private String nombres;
     private String primerApellido;
     private String segundoApellido;
@@ -15,12 +16,22 @@ public class ClienteDto
     public ClienteDto() {
     }
 
-    public ClienteDto(String nombres, String primerApellido, String segundoApellido, String nroDocumento, String telefono) {
+    public ClienteDto(Long idCliente, String nombres, String primerApellido, String segundoApellido, String nroDocumento, String telefono, Usuario usuario) {
+        this.idCliente = idCliente;
         this.nombres = nombres;
         this.primerApellido = primerApellido;
         this.segundoApellido = segundoApellido;
         this.nroDocumento = nroDocumento;
         this.telefono = telefono;
+        this.usuario = usuario;
+    }
+
+    public Long getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(Long idCliente) {
+        this.idCliente = idCliente;
     }
 
     public String getNombres() {

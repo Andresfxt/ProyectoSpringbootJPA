@@ -2,7 +2,6 @@ package proyecto_apirest_jpa.model;
 
 import jakarta.persistence.*;
 
-
 @Entity
 @Table(name = "clientes")
 public class Cliente
@@ -22,7 +21,7 @@ public class Cliente
     private String telefono;
 
     @OneToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name = "idUsuario", referencedColumnName = "idUsuario")
+    @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
     private Usuario usuario;
 
     public Cliente() {

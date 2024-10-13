@@ -8,6 +8,7 @@ public class Usuario
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id_usuario")
     private Long  idUsuario ;
 
     private String email;
@@ -16,7 +17,8 @@ public class Usuario
     public Usuario() {
     }
 
-    public Usuario(Long idUsuario, String email, String password) {
+    public Usuario(Long idUsuario, String email, String password)
+    {
         this.idUsuario = idUsuario;
         this.email = email;
         this.password = password;
